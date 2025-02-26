@@ -30,6 +30,7 @@ Python 3.9.14
 
 # run
 ```
+./yt-dlp.sh --config-location list.conf https://www.youtube.com/watch?v=zlq0CUtkOSI
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
 ```
 
