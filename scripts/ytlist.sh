@@ -1,1 +1,0 @@
-../yt-dlp.sh --config-location ../list.conf "$@"
