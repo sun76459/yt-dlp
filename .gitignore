@@ -1,5 +1,5 @@
 # Config
-*.conf
+#*.conf
 cookies
 *cookies.txt
 .netrc
