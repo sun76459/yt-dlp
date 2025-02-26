@@ -1,1 +1,1 @@
-../yt-dlp.sh --config-location "$@"
+../yt-dlp.sh "$@"
