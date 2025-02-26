@@ -25,13 +25,18 @@ Python 3.9.14
 #--proxy 127.0.0.1:3128
 
 # Save all videos under YouTube directory in your home directory
--o ~/var/services/video/YouTube2/%(title)s.%(ext)s
+-o /var/services/video/YouTube2/%(title)s.%(ext)s
+-o "/var/services/video/YouTube2/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s"
+
 ```
 
 # run
 ```
-./yt-dlp.sh --config-location list.conf https://www.youtube.com/watch?v=zlq0CUtkOSI
-./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
+# download a list
+./yt-dlp.sh "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
+
+# download mp3 file. -x = extract audio, --audio-format is mp3 
+./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x --audio-format mp3
 ```
 
 
