@@ -40,6 +40,9 @@ Python 3.9.14
 
 # ignore config file, download file to /volume1/downloads folder
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -P /volume1/downloads --ignore-config --ffmpeg-location /usr/local/bin/ffmpeg7
-```
 
+# specify a config file, use mp3.conf config file
+./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI --config-location mp3.conf
+
+```
 
