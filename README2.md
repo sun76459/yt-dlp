@@ -43,10 +43,10 @@ Python 3.9.14
 # download mp4 file
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
 
-# download opus file (audio)
+# download audio file (because the default video is mp4, the default audio is m4a, it does not need ffmpeg)
 ./yt-dlp.sh -x https://www.youtube.com/watch?v=zlq0CUtkOSI
 
-# download mp3 file (audio-quality 0=best, default is 5)
+# download mp3 file (audio-quality 0=best, default is 5. ffmpeg will be used to convert m4a to mp3. slow!)
 ./yt-dlp.sh -x --audio-format mp3 --audio-quality 0 https://www.youtube.com/watch?v=zlq0CUtkOSI
 
 # download a playlist to mp3 files
