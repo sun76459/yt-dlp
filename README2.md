@@ -23,9 +23,10 @@ Python 3.9.14
 --no-mtime
 
 # Output file path and name
--o "/volume1/video/tmp/%(title)s.%(ext)s"
--o "/volume1/video/tmp/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s"
--o "/volume1/video/tmp/%(playlist_id)s/%(playlist_index)s - %(title)100s.%(ext)s"
+-P "/volume1/video/tmp"
+-o "%(title)s.%(ext)s"
+-o "%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s"
+-o "%(playlist_id)s/%(playlist_index)s - %(title)100s.%(ext)s"
 
 
 ```
@@ -36,13 +37,19 @@ Python 3.9.14
 
 # run
 ```
-# download
+# download webm file
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
 
+# download opus file
+./yt-dlp.sh -x https://www.youtube.com/watch?v=zlq0CUtkOSI
+
 # download mp3 file
-./yt-dlp.sh --ignore-config -x --no-mtime --audio-format mp3 --ffmpeg-location /usr/local/bin/ffmpeg7 -o /volume1/video/tmp/%(title)s.%(ext)s https://www.youtube.com/watch?v=zlq0CUtkOSI
+./yt-dlp.sh -x --audio-format mp3 https://www.youtube.com/watch?v=zlq0CUtkOSI
+
+# download mp4 file
+./yt-dlp.sh -f mp4 https://www.youtube.com/watch?v=zlq0CUtkOSI
 
 # download a playlist
-./yt-dlp.sh --ignore-config -x --no-mtime --audio-format mp3 --ffmpeg-location /usr/local/bin/ffmpeg7 -o "/volume1/video/tmp/%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" --trim-filenames 100 "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
+./yt-dlp.sh -x --no-mtime --audio-format mp3 --ffmpeg-location /usr/local/bin/ffmpeg7 -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" --trim-filenames 100 "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
 ```
 
