@@ -14,19 +14,22 @@ Python 3.9.14
 ```
 /volume1/repos/yt-dlp/yt-dlp.conf
 
-# Always extract audio
--x
---audio-format mp3
---ffmpeg-location /usr/local/bin/ffmpeg7
-
 # Do not copy the mtime
 --no-mtime
 
-# Output file path and name
--P "/volume1/video/tmp"
--o "%(title)s.%(ext)s"
--o "%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s"
--o "%(playlist_id)s/%(playlist_index)s - %(title)100s.%(ext)s"
+# Output folder
+-P /volume1/video/tmp
+
+# Output filename
+-o %(title)s.%(ext)s
+
+--ffmpeg-location /usr/local/bin/ffmpeg7
+
+# Avoid long file name
+--trim-filenames 100
+
+# Use mp4, otherwise video file would be webm
+--format mp4
 
 
 ```
@@ -41,7 +44,7 @@ Python 3.9.14
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
 
 # download mp4 file
-./yt-dlp.sh -f mp4 https://www.youtube.com/watch?v=zlq0CUtkOSI
+./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
 
 # download opus file
 ./yt-dlp.sh -x https://www.youtube.com/watch?v=zlq0CUtkOSI
