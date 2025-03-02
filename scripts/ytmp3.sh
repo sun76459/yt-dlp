@@ -1,1 +1,0 @@
-../yt-dlp.sh -x --no-mtime --audio-format mp3 --ffmpeg-location /usr/local/bin/ffmpeg7 -o /volume1/video/tmp/%(title)s.%(ext)s "$@"
