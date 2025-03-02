@@ -43,8 +43,8 @@ Python 3.9.14
 # download opus file
 ./yt-dlp.sh -x https://www.youtube.com/watch?v=zlq0CUtkOSI
 
-# download mp3 file
-./yt-dlp.sh -x --audio-format mp3 https://www.youtube.com/watch?v=zlq0CUtkOSI
+# download mp3 file (audio-quality 0=best, default is 5)
+./yt-dlp.sh -x --audio-format mp3 --audio-quality 0 https://www.youtube.com/watch?v=zlq0CUtkOSI
 
 # download mp4 file
 ./yt-dlp.sh -f mp4 https://www.youtube.com/watch?v=zlq0CUtkOSI
