@@ -43,6 +43,6 @@ Python 3.9.14
 ./yt-dlp.sh --ignore-config -x --no-mtime --audio-format mp3 --ffmpeg-location /usr/local/bin/ffmpeg7 -o /volume1/video/tmp/%(title)s.%(ext)s https://www.youtube.com/watch?v=zlq0CUtkOSI
 
 # download a playlist
-../yt-dlp.sh --ignore-config -x --no-mtime --audio-format mp3 --ffmpeg-location /usr/local/bin/ffmpeg7 -o "TV-Shows/Chinese/%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" --trim-filenames 100 "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
+./yt-dlp.sh --ignore-config -x --no-mtime --audio-format mp3 --ffmpeg-location /usr/local/bin/ffmpeg7 -o "/volume1/video/tmp/%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" --trim-filenames 100 "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
 ```
 
