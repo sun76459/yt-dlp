@@ -29,8 +29,7 @@ Python 3.9.14
 --trim-filenames 100
 
 # Use mp4 (default would be webm)
---format bestvideo[ext=mp4]
-
+-f "bestvideo[ext=mp4]+bestaudio[ext!=opus]/best[ext=mp4]"
 
 ```
 # to ignore config file
