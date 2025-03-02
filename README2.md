@@ -28,8 +28,8 @@ Python 3.9.14
 # Avoid long file name
 --trim-filenames 100
 
-# Use mp4, otherwise video file would be webm
---format mp4
+# Use mp4 (default would be webm)
+--format bestvideo[ext=mp4]
 
 
 ```
@@ -40,13 +40,10 @@ Python 3.9.14
 
 # run
 ```
-# download webm file (default webm)
-./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
-
 # download mp4 file
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
 
-# download opus file
+# download opus file (audio)
 ./yt-dlp.sh -x https://www.youtube.com/watch?v=zlq0CUtkOSI
 
 # download mp3 file (audio-quality 0=best, default is 5)
