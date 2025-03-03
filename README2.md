@@ -28,9 +28,8 @@ Python 3.9.14
 # Avoid long file name
 --trim-filenames 100
 
-# Use mp4 (default would be webm)
--f "bestvideo[ext=mp4]+bestaudio[ext!=opus]/best[ext=mp4]"
-
+--audio-format mp3
+--audio-quality 0
 ```
 # to ignore config file
 ```
@@ -39,16 +38,16 @@ Python 3.9.14
 
 # run
 ```
-# download mp4 file
+# download webm file
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
 
-# download audio file (because the default video is mp4, the default audio is m4a, it does not need ffmpeg)
-./yt-dlp.sh -x https://www.youtube.com/watch?v=zlq0CUtkOSI
+# download mp4 file
+./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -f mp4
 
-# download mp3 file (audio-quality 0=best, default is 5. ffmpeg will be used to convert m4a to mp3. slow!)
-./yt-dlp.sh -x --audio-format mp3 --audio-quality 0 https://www.youtube.com/watch?v=zlq0CUtkOSI
+# download mp3 file
+./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x
 
 # download a playlist to mp3 files
-./yt-dlp.sh -x --audio-format mp3 --audio-quality 0 -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" --trim-filenames 100 "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
+./yt-dlp.sh -x -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" --trim-filenames 100 "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
 ```
 
