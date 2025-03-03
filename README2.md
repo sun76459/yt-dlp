@@ -28,8 +28,6 @@ Python 3.9.14
 # Avoid long file name
 --trim-filenames 100
 
---audio-format mp3
---audio-quality 0
 ```
 # to ignore config file
 ```
@@ -38,14 +36,17 @@ Python 3.9.14
 
 # run
 ```
-# download webm file
+# download webm file (default)
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
 
 # download mp4 file
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -f mp4
 
-# download mp3 file
+# download opus file (default)
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x
+
+# download mp3 file
+./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x --audio-format mp3 --audio-quality 0
 
 # download a playlist to mp3 files
 ./yt-dlp.sh -x -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" --trim-filenames 100 "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
