@@ -36,14 +36,14 @@ Python 3.9.14
 
 # run
 ```
-# download webm file (default)
+# download webm file (default video)
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
+
+# download opus file (default audio)
+./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x
 
 # download mp4 file
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -f mp4
-
-# download opus file (default)
-./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x
 
 # download mp3 file
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x --audio-format mp3 --audio-quality 0
