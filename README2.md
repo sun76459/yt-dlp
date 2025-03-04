@@ -36,22 +36,21 @@ Python 3.9.14
 
 # run
 ```
-# download webm file (default video)
+# download video (default: webm)
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI
 
-# download opus file (default audio)
+# download audio (default: opus)
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x
 
-# download mp4 file
+# download video (mp4)
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -f mp4
 
-# download mp3 file
+# download audio (m4a)
+./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -f m4a
+
+# download audio (mp3, need ffmpeg)
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x --audio-format mp3 --audio-quality 0
 
-# download m4a file
-./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x --audio-format m4a --audio-quality 0
-
-# download a playlist to mp3 files
-./yt-dlp.sh -x -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" --trim-filenames 100 "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
+# download a playlist to m4a files
+./yt-dlp.sh -f "ba[ext=m4a]" -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" --trim-filenames 100 "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
 ```
-
