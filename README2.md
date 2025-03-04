@@ -48,6 +48,9 @@ Python 3.9.14
 # download mp3 file
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x --audio-format mp3 --audio-quality 0
 
+# download m4a file
+./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x --audio-format m4a --audio-quality 0
+
 # download a playlist to mp3 files
 ./yt-dlp.sh -x -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" --trim-filenames 100 "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
 ```
