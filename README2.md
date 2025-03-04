@@ -53,4 +53,7 @@ Python 3.9.14
 
 # download a playlist to m4a files
 ./yt-dlp.sh -f "ba[ext=m4a]" -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" --trim-filenames 100 "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
+
+# list formats
+./yt-dlp.sh https://www.youtube.com/watch?v=gMG_MR-ihis --list-formats
 ```
