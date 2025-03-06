@@ -29,9 +29,6 @@ https://www.youtube.com/watch?v=gMG_MR-ihis
 
 
 
-
-
-
 # Understanding Private Endpoints in Azure | VM, VNet, Service Endpoint, and Storage Account Demo
 # 20:18
 https://www.youtube.com/watch?v=HaqiPmTi7J8
@@ -47,3 +44,12 @@ https://www.youtube.com/watch?v=h8od9fZKzRg
 # An Introduction to Virtual Network (VNet) Peering in Azure
 # 10:34
 https://www.youtube.com/watch?v=eaosTGtNLbg
+
+
+# Foundations of vSAN Architecture
+# playlist 17 videos
+https://www.youtube.com/watch?v=jYSjJEZmGhs&list=PLjwkgfjHppDtCLZzrObR1dPhstW2Y5lY6
+
+
+# VMware vSAN HCI Mesh Demo
+https://www.youtube.com/watch?v=8jy7TYDVU88
