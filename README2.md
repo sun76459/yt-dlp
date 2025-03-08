@@ -56,4 +56,8 @@ Python 3.9.14
 
 # list formats
 ./yt-dlp.sh https://www.youtube.com/watch?v=gMG_MR-ihis --list-formats
+
+# limit the resolution to 720p
+./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -f "bv*[ext=webm][height<=720]+ba[ext=webm]/b[ext=webm]"
+
 ```
