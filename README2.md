@@ -51,9 +51,6 @@ Python 3.9.14
 # download audio (mp3, need ffmpeg)
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -x --audio-format mp3 --audio-quality 0
 
-# download a playlist to m4a files
-./yt-dlp.sh -f "ba[ext=m4a]" -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
-
 # list formats
 ./yt-dlp.sh https://www.youtube.com/watch?v=gMG_MR-ihis --list-formats
 
@@ -63,4 +60,9 @@ Python 3.9.14
 # download playlist as webm, upto 720p
 time ./yt-dlp.sh "https://www.youtube.com/watch?v=Lb8RjZGB0Us&list=PLkvG4EWPDB0m8u9tgBwBpU9oorJ1kDPgU" -f "bv*[ext=webm][height<=720]+ba[ext=webm]/b[ext=webm]" -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s"
 
+# download playlist as webm, upto 1080p
+time ./yt-dlp.sh "https://www.youtube.com/watch?v=t8YD27LZkiQ&list=PLQqbdnAgoRmZGKpEYTew9llwAjkP6wNLr" -f "bv*[ext=webm][height<=1080]+ba[ext=webm]/b[ext=webm]" -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s"
+
+# download a playlist to m4a files
+./yt-dlp.sh -f "ba[ext=m4a]" -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
 ```
