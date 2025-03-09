@@ -60,4 +60,7 @@ Python 3.9.14
 # limit the resolution to 720p
 ./yt-dlp.sh https://www.youtube.com/watch?v=zlq0CUtkOSI -f "bv*[ext=webm][height<=720]+ba[ext=webm]/b[ext=webm]"
 
+# download playlist as webm, upto 720p
+time ./yt-dlp.sh "https://www.youtube.com/watch?v=Lb8RjZGB0Us&list=PLkvG4EWPDB0m8u9tgBwBpU9oorJ1kDPgU" -f "bv*[ext=webm][height<=720]+ba[ext=webm]/b[ext=webm]" -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s"
+
 ```
