@@ -70,3 +70,9 @@ time ./yt-dlp.sh "https://www.youtube.com/watch?v=t8YD27LZkiQ&list=PLQqbdnAgoRmZ
 # download a playlist to m4a files
 ./yt-dlp.sh -f "ba[ext=m4a]" -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s" "https://www.youtube.com/watch?v=tNYiMxHbcE4&list=PL_IzBVwc567ZMQNUOSJTpM-kwz3vStH90"
 ```
+
+banned IP
+99.255.249.229
+2001:4860:7:304::da
+2001:4860:7:304::fd
+2607:fea8:74a3:3b00:5987:bd0c:28f7:204d
