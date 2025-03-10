@@ -60,6 +60,10 @@ Python 3.9.14
 # download playlist as webm, upto 720p
 time ./yt-dlp.sh "https://www.youtube.com/watch?v=Lb8RjZGB0Us&list=PLkvG4EWPDB0m8u9tgBwBpU9oorJ1kDPgU" -f "bv*[ext=webm][height<=720]+ba[ext=webm]/b[ext=webm]" -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s"
 
+# download playlist as mp4, avoid vp9 (iOS does not support vp9), upto 720p, 凡人歌, ^= means starts with
+time ./yt-dlp.sh "https://www.youtube.com/watch?v=Lb8RjZGB0Us&list=PLkvG4EWPDB0m8u9tgBwBpU9oorJ1kDPgU" -f "bv*[vcodec^=avc1][height<=720]+ba[ext=m4a]/b[ext=mp4]" --merge-output-format mp4 -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s"
+
+
 # download playlist as webm, upto 1080p
 time ./yt-dlp.sh "https://www.youtube.com/watch?v=t8YD27LZkiQ&list=PLQqbdnAgoRmZGKpEYTew9llwAjkP6wNLr" -f "bv*[ext=webm][height<=1080]+ba[ext=webm]/b[ext=webm]" -o "%(playlist_id)s/%(playlist_index)s - %(title)s.%(ext)s"
 
